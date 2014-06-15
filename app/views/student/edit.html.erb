@@ -1,0 +1,14 @@
+<%= form_for @aluno, url: update_path do |n| %>
+
+	<%= n.label :name, "Nome: " %>
+	<%= n.text_field :name %><br>
+
+	<%= n.label :number, "Número: " %>
+	<%= n.text_field :number %><br>
+
+	<%= n.label :serie, "Série: " %>
+	<%= n.text_field :serie %><br>
+
+	<%= n.submit "Salvar" %>
+	<%= link_to "Cancelar", root_path %>
+<% end %>

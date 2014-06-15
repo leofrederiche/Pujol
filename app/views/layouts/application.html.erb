@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pujol</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="windows">
+		<%= link_to "Inicio", root_path, id: "button"%>
+		<%= link_to "Novo Aluno", new_path, id: "button" %>
+	<%= yield %>
+</div>
+
+</body>
+</html>

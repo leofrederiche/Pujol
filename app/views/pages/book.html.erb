@@ -1,0 +1,23 @@
+<%= link_to "Adicionar Livro", new_book_path, id: "button" %>
+
+<table>
+	<tr>
+		<th>Livro</th>
+		<th>Retirada</th>
+		<th>Devolução</th>
+	</tr>
+
+	<% @livros.each do |l| %>
+		<% if l.ref == @aluno.name %>
+		<tr>
+			<td><%= l.livro %></td>
+			<td><%= l.entrada %></td>
+			<td><%= l.devolucao %></td>
+			<td><%= link_to "Renovar", renew_book_path(l.id) %></td>
+		</tr>
+		<% else %>
+
+		<% end %>
+
+	<% end %>
+</table>

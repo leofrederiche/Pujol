@@ -1,0 +1,46 @@
+<div id="search">
+<%= form_tag root_path, method: :get do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Pesquisar" %>
+<%  end %>
+ 
+<% if @procurar_aluno %>
+  <% @procurar_aluno.each do |p| %>
+    <p> 
+    	<%= p.name %> 
+    	<%= p.serie %> 
+
+    	<% @alunos.each do |alunos| %>
+    		<% if  alunos.name == p.name %>
+    			<%= link_to "Livros", book_path(alunos.id) %>
+		    	<%= link_to "Editar", edit_path(alunos.id) %>
+		    	<%= link_to "Deletar", delete_path(alunos.id) %>
+    		<% end %>
+    	<% end %>    	
+    </p>
+  <% end %>
+<% else %>
+  <p>Nenhum registro encontrado.</p>
+<% end %>
+</div>
+
+<table>
+	<tr>
+		<th>Nome</th>
+		<th>Número</th>
+		<th>Série</th>
+	</tr>
+
+	<% @alunos.each do |alunos| %>
+	<tr>
+		<td><%= alunos.name %></td>
+		<td><%= alunos.number %></td>
+		<td><%= alunos.serie %></td>
+		<td><%= link_to "Livros", book_path(alunos.id) %></td>
+		<td><%= link_to "Editar", edit_path(alunos.id) %></td>
+		<td><%= link_to "Deletar", delete_path(alunos.id) %></td>
+	</tr>
+	<% end %>
+</table>
+
+

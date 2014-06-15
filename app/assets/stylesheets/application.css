@@ -1,0 +1,39 @@
+#button{
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	padding: 5px 10px;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#button:hover{
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	color: white;
+}
+
+#search{
+}
+
+th{
+	background-color: rgba(0,0,0,0.7);
+	padding: 0 10px;
+	color: white;
+}
+
+td{
+	text-align: center;
+	background-color: rgba(0,0,0,0.5);
+	padding: 0 10px;
+	color: white;
+}
+

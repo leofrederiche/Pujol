@@ -1,0 +1,17 @@
+<%= form_for @livro, url: new_book_path do |n| %>
+
+	<%= n.label :livro, "Livro: " %>
+	<%= n.text_field :livro %><br>
+
+	<%= n.label :entrada, "Retirada: " %>
+	<%= n.date_select :entrada %><br>
+
+	<%= n.label :devolucao, "Devolução: " %>
+	<%= n.date_select :devolucao %><br>
+
+	<%= n.label :ref, "Nome do Aluno: " %>
+	<%= n.text_field :ref, value: @aluno.name %><br>
+
+	<%= n.submit "Adicionar" %>
+	<%= link_to "Cancelar", root_path, id: "button" %>
+<% end %>
