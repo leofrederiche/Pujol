@@ -5,14 +5,14 @@
 #   gem 'sqlite3'
 #
 development:
-  adapter: postgresql
-  database: pujol_development
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
   timeout: 5000
 
 test:
-  adapter: postgresql
-  database: pujol_test
+  adapter: sqlite3
+  database: db/test.sqlite3
   pool: 5
   timeout: 5000
 

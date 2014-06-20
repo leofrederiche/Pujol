@@ -1,13 +1,13 @@
 <%= form_for @aluno, url: new_path do |n| %>
 
 	<%= n.label :name, "Nome: " %>
-	<%= n.text_field :name %><br>
+	<%= n.text_field :name, id: "edit1" %><br>
 
 	<%= n.label :number, "Número: " %>
-	<%= n.text_field :number %><br>
+	<%= n.text_field :number, id: "edit2" %><br>
 
 	<%= n.label :serie, "Série: " %>
-	<%= n.text_field :serie %><br>
+	<%= n.text_field :serie, id: "edit3" %><br>
 
 	<%= n.submit "Adicionar" %>
 	<%= link_to "Cancelar", root_path, id: "button" %>
